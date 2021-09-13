@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    {% load static %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+</head>
+<body>
+<form method="POST" class="post-form" action="/std/">
+        {% csrf_token %}
+    <div class="container">
+<br>
+        <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        <h3>Enter Details</h3>
+        </div>
+    </div>
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Students name:</label>
+        <div class="col-sm-4">
+            {{ form.fullname }}
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Book name:</label>
+        <div class="col-sm-4">
+         {{ form.name_of_book }}
+        </div>
+    </div>
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Mobile:</label>
+        <div class="col-sm-4">
+            {{ form.mobile }}
+        </div>
+    </div>
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Degree:</label>
+        <div class="col-sm-4">
+            {{ form.degree }}
+        </div>
+    </div>
+
+        <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="/view/"  class="btn btn-primary">Lista</a>
+        </div>
+    </div>
+        </div>
+        
+</form>
+</body>
+
+
+
+</html>
